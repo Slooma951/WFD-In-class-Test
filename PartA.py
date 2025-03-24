@@ -14,21 +14,26 @@ class Phone:
         print("Colour:", self.colour)
 
     def update_brand(self, new_brand):
-        self.brand = new_brand
+        if isinstance(new_brand, str):
+            self.brand = new_brand
 
     def update_model(self, new_model):
-        self.model = new_model
+        if isinstance(new_model, str):
+            self.model = new_model
 
     def update_year(self, new_year):
-        self.year = new_year
+        if isinstance(new_year, int):
+            self.year = new_year
 
     def update_price(self, new_price):
-        self.price = new_price
+        if isinstance(new_price, (int, float)):
+            self.price = new_price
 
     def update_colour(self, new_colour):
-        self.colour = new_colour
+        if isinstance(new_colour, str):
+            self.colour = new_colour
 
-phone1 = Phone("Iphone", "13", 2021, 799, "midnight black")
+phone1 = Phone("iPhone", "13", 2021, 799, "Midnight Black")
 
 phone1.display_info()
 
